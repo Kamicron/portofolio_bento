@@ -4,7 +4,7 @@ body {
   font-size: var(--base-font-size);
   line-height: var(--line-height);
   font-weight: var(--font-weight-regular);
-  margin: 0 50px;
+  padding: 0 40px;
   background-color: var(--white);
   color: var(--dark-gray);
 }
