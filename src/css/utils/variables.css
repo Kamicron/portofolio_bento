@@ -3,13 +3,13 @@
   --primary-font: 'Roboto', sans-serif;
   --secondary-font: 'Montserrat', sans-serif;
 
-  --base-font-size: 16px;
-  --h1-font-size: 36px;
-  --h2-font-size: 24px;
-  --h3-font-size: 18px;
-  --h4-font-size: 16px;
-  --h5-font-size: 14px;
-  --h6-font-size: 12px;
+  --base-font-size: 1rem;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.125rem;
+  --h4-font-size: 1rem;
+  --h5-font-size: 0.875rem;
+  --h6-font-size: 0.75rem;
 
   --font-weight-regular: 400;
   --font-weight-medium: 500;
@@ -24,5 +24,6 @@
   --light-gray: #F5F5F5;
   --medium-gray: #6d717e;
   --dark-gray: #4f5564;
-  --dynamic-color: #FF5722;
+  --dynamic-color_white: #D7C6A8;
+  --dynamic-color_black: #93C8B4;
 }
