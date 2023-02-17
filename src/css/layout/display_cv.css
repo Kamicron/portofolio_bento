@@ -21,8 +21,14 @@
   margin-bottom: 0.5rem;
 }
 
+.cv__section-item-title-sperator {
+  color: var(--dynamic-color_white);
+}
+
 .cv__section-item-date {
   font-style: italic;
+  font-size: var(--base-font-size);
+  font-weight: var(--font-weight-regular);
   margin-bottom: 0.5rem;
 }
 

@@ -39,8 +39,7 @@
   <div class="cv__section">
     <h3 class="cv__section-title">Formation</h3>
     <div class="cv__section-item">
-      <h4 class="cv__section-item-title">Titre de la formation</h4>
-      <p class="cv__section-item-date">Date de la formation</p>
+      <p class="cv__section-item-title">Titre de la formation <span class="cv__section-item-title-sperator">| </span><span class="cv__section-item-date">Date de la formation</span></p>
       <p class="cv__section-item-description">Description de la formation</p>
       <ul class="cv__section-item-tags">
         <li class="cv__section-item-tag">HTML</li>
@@ -50,7 +49,7 @@
     </div>
   </div>
   <div class="cv__section">
-    <h3 class="cv__section-title">Expérience professionnelle</h3>
+  <p class="cv__section-item-title">Titre du poste<span class="cv__section-item-title-sperator">| </span><span class="cv__section-item-date">Date de la formation</span></p>
     <div class="cv__section-item">
       <h4 class="cv__section-item-title">Titre du poste</h4>
       <p class="cv__section-item-date">Date de l'expérience professionnelle</p>
