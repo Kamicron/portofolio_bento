@@ -7,7 +7,12 @@
 <section class="section section--left">
   <div class="information">
     <h1>Ludovic CHEVROULET</h1>
-    Développeur junior
+    <div class="profile-icon">
+      <img src="asset/photo/ludovic_chevroulet.jpg" alt="Votre nom">
+    </div>
+    <div> 
+    Initialement technicien en CEM, j’ai choisis de m’orienter sur le développement web, un métier que j’ai découvert lors de ma dernière mission, afin de me positionner sur le marché du travailr
+    </div>
   </div>
   <div class="contact">
     <h2>Contactez moi</h2>

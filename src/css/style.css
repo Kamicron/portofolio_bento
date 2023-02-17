@@ -25,5 +25,7 @@ Soyez attentifs à l'ordre d'import :
 
 /*Layout   */
 @import "layout/display.css";
+@import "layout/display_information.css";
 
 /*Composants   */
+@import "components/profile_icon.css";
