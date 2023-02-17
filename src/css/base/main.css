@@ -1,0 +1,58 @@
+/* Utilisation des variables de police */
+body {
+  font-family: var(--primary-font);
+  font-size: var(--base-font-size);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight-regular);
+  margin: 0 50px;
+  background-color: var(--white);
+  color: var(--dark-gray);
+}
+
+h1, h2{
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height);
+}
+
+h4 {
+  font-size: var(--h4-font-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height);
+}
+
+h5 {
+  font-size: var(--h5-font-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height);
+}
+
+h6 {
+  font-size: var(--h6-font-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height);
+}
+
+.title_bg-white{
+  color: var(--dynamic-color_black);
+}
+
+.title_bg-black{
+  color: var(--dynamic-color_white);
+}

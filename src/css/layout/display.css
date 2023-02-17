@@ -1,0 +1,48 @@
+main {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  position: relative;
+  gap: 50%;
+}
+
+.section--left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: var(--dark-gray);
+  color: var(--white);
+  max-width: 35%;
+  z-index: 1;
+  padding: 45px;
+}
+
+.section--right {
+  width: 50%;
+  overflow-y: auto;
+}
+
+.projectWrapper{
+  display: flex;
+  flex-wrap: wrap;
+  gap : 50px
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .section--left,
+  .section--right {
+    width: 100%;
+    height: auto;
+  }
+
+  .section--left {
+    position: relative;
+    left: 0;
+  }
+}
