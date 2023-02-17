@@ -28,6 +28,8 @@ Soyez attentifs à l'ordre d'import :
 @import "layout/display_information.css";
 @import "layout/display_contact.css";
 @import "layout/display_cv.css";
+@import "layout/display_project.css";
 
 /*Composants   */
 @import "components/profile_icon.css";
+@import "components/tag.css";
