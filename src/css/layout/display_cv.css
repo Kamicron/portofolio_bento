@@ -30,8 +30,16 @@
   font-size: var(--base-font-size);
   font-weight: var(--font-weight-regular);
   margin-bottom: 0.5rem;
+  text-transform: capitalize;
 }
 
 .cv__section-item-description {
   margin-bottom: 0.5rem;
+}
+
+.cv__section-item-separator  {
+  border-color: var(--light-gray);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
 }
