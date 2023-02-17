@@ -1,0 +1,14 @@
+/* Variables de police */
+:root {
+  --primary-font: 'Roboto', sans-serif;
+  --secondary-font: 'Montserrat', sans-serif;
+}
+
+/* Variables de couleur */
+:root {
+  --white: #FFFFFF;
+  --light-gray: #F5F5F5;
+  --medium-gray: #CCCCCC;
+  --dark-gray: #333333;
+  --dynamic-color: #FF5722;
+}
