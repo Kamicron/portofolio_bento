@@ -1,4 +1,6 @@
 <?php include('src/commun/header.php'); ?>
+<?php include('inc/functions.php'); ?>
+<?php include('inc/bdd.php'); ?>
 
 <header class="header">
 
@@ -35,156 +37,85 @@
 <section class="section section--right">
   <div class="cv">
     <h2 class="title_bg-white">Mon CV</h2>
-
+    <?php
+    $formations = getFormation();
+    ?>
     <div class="cv__section">
       <h3 class="cv__section-title">Formation</h3>
-      <div class="cv__section-item">
-        <p class="cv__section-item-title">Titre de la formation <span class="cv__section-item-title-sperator">| </span><span class="cv__section-item-date">Date de la formation</span></p>
-        <p class="cv__section-item-description">Description de la formation</p>
-        <ul class="section-item-tags">
-          <li class="item-tag">HTML</li>
-          <li class="item-tag">CSS</li>
-          <li class="item-tag">JavaScript</li>
-        </ul>
-      </div>
+      <?php
+      foreach ($formations as $keyFormation => $formation) { ?>
+        <div class="cv__section-item">
+          <p class="cv__section-item-title"><?php echo $keyFormation; ?><span class="cv__section-item-title-sperator"> | </span><span class="cv__section-item-date"><?php echo $formation['date']; ?></span></p>
+          <p class="cv__section-item-description"><?php echo $formation['desc_row']; ?></p>
+          <ul class="section-item-tags">
+            <?php
+            foreach ($formation['tag_name'] as $tag) { ?>
+              <li class="item-tag"><?php echo $tag; ?></li>
+            <?php
+            }
+            ?>
+          </ul>
+        </div>
+      <?php
+        if ($keyFormation !== array_key_last($formations)) {
+          echo '<hr class="cv__section-item-separator">';
+        }
+      }
+      ?>
     </div>
     <div class="cv__section">
-      <p class="cv__section-item-title">Titre du poste<span class="cv__section-item-title-sperator">| </span><span class="cv__section-item-date">Date de la formation</span></p>
-      <div class="cv__section-item">
-        <h4 class="cv__section-item-title">Titre du poste</h4>
-        <p class="cv__section-item-date">Date de l'expérience professionnelle</p>
-        <p class="cv__section-item-description">Description de l'expérience professionnelle</p>
-        <ul class="section-item-tags">
-          <li class="item-tag">PHP</li>
-          <li class="item-tag">SQL</li>
-          <li class="item-tag">Java</li>
-        </ul>
+      <?php $experiences = getExperience(); ?>
+      <h3 class="cv__section-title">Expérience professionelles</h3>
+      <?php
+      foreach ($experiences as $keyExperience => $experience) { ?>
+        <div class="cv__section-item">
+          <p class="cv__section-item-title"><?php echo $keyExperience; ?><span class="cv__section-item-title-sperator"> | </span><span class="cv__section-item-date"><?php echo $experience['date_start'] . " - " . $experience['date_end']; ?></span></p>
+          <p class="cv__section-item-description"><?php echo $experience['desc_row']; ?></p>
+          <ul class="section-item-tags">
+            <?php
+            foreach ($experience['tag_name'] as $tag) { ?>
+              <li class="item-tag"><?php echo $tag; ?></li>
+            <?php
+            }
+            ?>
+          </ul>
+        </div>
+      <?php
+        if ($keyExperience !== array_key_last($experience)) {
+          echo '<hr class="cv__section-item-separator">';
+        }
+      }
+      ?>
+    </div>
+    <?php
+    $projects = getProject();
+
+    ?>
+    <div class="project">
+      <h2 class="title_bg-white">Mes projets</h2>
+      <div class="projectWrapper">
+
+        <?php
+        foreach ($projects as $keyProject => $project) { ?>
+          <div class="project-card">
+            <img src="asset/photo/project/<?php echo  $project['name_img']; ?>" alt="<?php echo $project['alt_img']; ?>">
+            <div class="project-info">
+              <h3><?php echo  $keyProject; ?></h3>
+              <p><?php echo $project['sub_title_row']; ?></p>
+              <ul class="section-item-tags">
+                <?php
+                foreach ($project['tag_name'] as $tag) { ?>
+                  <li class="item-tag"><?php echo $tag; ?></li>
+                <?php
+                }
+                ?>
+              </ul>
+            </div>
+          </div>
+        <?php
+        }
+        ?>
       </div>
     </div>
-  </div>
-
-  <div class="project">
-    <h2 class="title_bg-white">Mes projets</h2>
-    <div class="projectWrapper">
-
-
-      <div class="project-card">
-        <img src="path/to/image" alt="Project image">
-        <div class="project-info">
-          <h3>Titre du projet</h3>
-          <p>Description courte du projet</p>
-          <ul class="section-item-tags">
-          <li class="item-tag">HTML</li>
-          <li class="item-tag">CSS</li>
-          <li class="item-tag">JavaScript</li>
-        </ul>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <img src="asset/photo/project/bf.JPG" alt="Project image">
-        <div class="project-info">
-          <h3>Titre du projet</h3>
-          <p>Description courte du projet</p>
-          <ul class="section-item-tags">
-          <li class="item-tag">HTML</li>
-          <li class="item-tag">CSS</li>
-          <li class="item-tag">JavaScript</li>
-        </ul>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <img src="path/to/image" alt="Project image">
-        <div class="project-info">
-          <h3>Titre du projet</h3>
-          <p>Description courte du projet</p>
-        <ul class="section-item-tags">
-          <li class="item-tag">HTML</li>
-          <li class="item-tag">CSS</li>
-          <li class="item-tag">JavaScript</li>
-        </ul>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <img src="path/to/image" alt="Project image">
-        <div class="project-info">
-          <h3>Titre du projet</h3>
-          <p>Description courte du projet</p>
-        <ul class="section-item-tags">
-          <li class="item-tag">HTML</li>
-          <li class="item-tag">CSS</li>
-          <li class="item-tag">JavaScript</li>
-        </ul>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <img src="path/to/image" alt="Project image">
-        <div class="project-info">
-          <h3>Titre du projet</h3>
-          <p>Description courte du projet</p>
-        <ul class="section-item-tags">
-          <li class="item-tag">HTML</li>
-          <li class="item-tag">CSS</li>
-          <li class="item-tag">JavaScript</li>
-        </ul>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <img src="path/to/image" alt="Project image">
-        <div class="project-info">
-          <h3>Titre du projet</h3>
-          <p>Description courte du projet</p>
-        <ul class="section-item-tags">
-          <li class="item-tag">HTML</li>
-          <li class="item-tag">CSS</li>
-          <li class="item-tag">JavaScript</li>
-        </ul>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <img src="path/to/image" alt="Project image">
-        <div class="project-info">
-          <h3>Titre du projet</h3>
-          <p>Description courte du projet</p>
-        <ul class="section-item-tags">
-          <li class="item-tag">HTML</li>
-          <li class="item-tag">CSS</li>
-          <li class="item-tag">JavaScript</li>
-        </ul>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <img src="path/to/image" alt="Project image">
-        <div class="project-info">
-          <h3>Titre du projet</h3>
-          <p>Description courte du projet</p>
-        <ul class="section-item-tags">
-          <li class="item-tag">HTML</li>
-          <li class="item-tag">CSS</li>
-          <li class="item-tag">JavaScript</li>
-        </ul>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <img src="path/to/image" alt="Project image">
-        <div class="project-info">
-          <h3>Titre du projet</h3>
-          <p>Description courte du projet</p>
-        <ul class="section-item-tags">
-          <li class="item-tag">HTML</li>
-          <li class="item-tag">CSS</li>
-          <li class="item-tag">JavaScript</li>
-        </ul>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 <?php include('src/commun/footer.php'); ?>
