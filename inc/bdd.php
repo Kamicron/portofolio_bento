@@ -1,10 +1,10 @@
 <?php
 define('MYSQL_HOST', 'localhost');
 define('MYSQL_PORT', 3306);
-define('MYSQL_NAME', 'portofolio');
-define('MYSQL_USER', 'root');
-define('MYSQL_PASSWORD', 'root');
-define('URL', 'http://localhost/portofolio_bento');
+define('MYSQL_NAME', 'ludovimkamicron');
+define('MYSQL_USER', 'ludovimkamicron');
+define('MYSQL_PASSWORD', 'FCSMDzns32');
+define('URL', '	ludovimkamicron.mysql.db');
 
 
 /**
