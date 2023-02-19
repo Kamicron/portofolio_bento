@@ -44,6 +44,7 @@ function getFormation()
         tag.idtag = tag_has_row .tag_idtag AND
         row.idrow = row_idrow AND
         type.idtype = 1
+        ORDER BY row.date_start DESC;
         ";
     $stmt = $database->prepare($sql);
     $stmt->execute();
@@ -70,7 +71,9 @@ function getExperience()
         WHERE row.type_idtype=2 AND
         type.idtype=2 AND
         tag_has_row.tag_idtag = tag.idtag AND
-        row.idrow = tag_has_row.row_idrow;
+        row.idrow = tag_has_row.row_idrow
+        ORDER BY row.date_start DESC;
+        ;
     ";
     $stmt = $database->prepare($sql);
     $stmt->execute();
@@ -99,7 +102,8 @@ function getProject()
         type.idtype=3 AND
         tag_has_row.tag_idtag = tag.idtag AND
         row.idrow = tag_has_row.row_idrow AND
-        image.idimage = row.image_idimage;
+        image.idimage = row.image_idimage
+        ORDER BY row.date_start DESC;
     ";
     $stmt = $database->prepare($sql);
     $stmt->execute();

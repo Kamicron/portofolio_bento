@@ -57,6 +57,7 @@
           </ul>
         </div>
       <?php
+
         if ($keyFormation !== array_key_last($formations)) {
           echo '<hr class="cv__section-item-separator">';
         }
@@ -70,7 +71,7 @@
       foreach ($experiences as $keyExperience => $experience) { ?>
         <div class="cv__section-item">
           <h4 class="cv__section-item-title"><?php echo $keyExperience; ?><span class="cv__section-item-title-sperator"> | </span><span class="cv__section-item-date"><?php echo $experience['date_start'] . " - " . $experience['date_end']; ?></span></h4>
-          <p class="cv__section-item-description"><?php echo $experience['desc_row']; ?></p>
+          <p class="cv__section-item-description"><?php echo nl2br($experience['desc_row']); ?></p>
           <ul class="section-item-tags">
             <?php
             foreach ($experience['tag_name'] as $tag) { ?>
@@ -81,7 +82,8 @@
           </ul>
         </div>
       <?php
-        if ($keyExperience !== array_key_last($experience)) {
+
+        if ($keyExperience !== array_key_last($experiences)) {
           echo '<hr class="cv__section-item-separator">';
         }
       }
