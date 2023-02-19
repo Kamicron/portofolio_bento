@@ -4,7 +4,7 @@ main {
   flex-direction: row;
   flex: 1;
   position: relative;
-  gap: 50%;
+  gap: 40%;
 }
 
 .section--left {
@@ -22,6 +22,7 @@ main {
 .section--right {
   width: 50%;
   overflow-y: auto;
+  margin-left: 10px;
 }
 
 .projectWrapper{

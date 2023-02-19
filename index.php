@@ -45,7 +45,7 @@
       <?php
       foreach ($formations as $keyFormation => $formation) { ?>
         <div class="cv__section-item">
-          <p class="cv__section-item-title"><?php echo $keyFormation; ?><span class="cv__section-item-title-sperator"> | </span><span class="cv__section-item-date"><?php echo $formation['date']; ?></span></p>
+          <h4 class="cv__section-item-title"><?php echo $keyFormation; ?><span class="cv__section-item-title-sperator"> | </span><span class="cv__section-item-date"><?php echo $formation['date']; ?></span></h4>
           <p class="cv__section-item-description"><?php echo $formation['desc_row']; ?></p>
           <ul class="section-item-tags">
             <?php
@@ -57,6 +57,7 @@
           </ul>
         </div>
       <?php
+
         if ($keyFormation !== array_key_last($formations)) {
           echo '<hr class="cv__section-item-separator">';
         }
@@ -69,8 +70,8 @@
       <?php
       foreach ($experiences as $keyExperience => $experience) { ?>
         <div class="cv__section-item">
-          <p class="cv__section-item-title"><?php echo $keyExperience; ?><span class="cv__section-item-title-sperator"> | </span><span class="cv__section-item-date"><?php echo $experience['date_start'] . " - " . $experience['date_end']; ?></span></p>
-          <p class="cv__section-item-description"><?php echo $experience['desc_row']; ?></p>
+          <h4 class="cv__section-item-title"><?php echo $keyExperience; ?><span class="cv__section-item-title-sperator"> | </span><span class="cv__section-item-date"><?php echo $experience['date_start'] . " - " . $experience['date_end']; ?></span></h4>
+          <p class="cv__section-item-description"><?php echo nl2br($experience['desc_row']); ?></p>
           <ul class="section-item-tags">
             <?php
             foreach ($experience['tag_name'] as $tag) { ?>
@@ -81,7 +82,8 @@
           </ul>
         </div>
       <?php
-        if ($keyExperience !== array_key_last($experience)) {
+
+        if ($keyExperience !== array_key_last($experiences)) {
           echo '<hr class="cv__section-item-separator">';
         }
       }
@@ -101,7 +103,7 @@
             <img src="asset/photo/project/<?php echo  $project['name_img']; ?>" alt="<?php echo $project['alt_img']; ?>">
             <div class="project-info">
               <h3><?php echo  $keyProject; ?></h3>
-              <p><?php echo $project['sub_title_row']; ?></p>
+              <h4><?php echo $project['sub_title_row']; ?></h4>
               <ul class="section-item-tags">
                 <?php
                 foreach ($project['tag_name'] as $tag) { ?>
