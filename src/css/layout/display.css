@@ -1,9 +1,56 @@
-.mainWrapper {
+
+main {
   display: flex;
-  gap: 10px;
-  margin: 0 100px;
+  flex-direction: row;
+  flex: 1;
+  position: relative;
+  gap: 40%;
 }
 
-.mainItem {
-  background-color: red;
+.section--left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: var(--dark-gray);
+  color: var(--white);
+  max-width: 35%;
+  z-index: 1;
+  padding: 45px;
+}
+
+.section--right {
+  width: 50%;
+  overflow-y: auto;
+  margin-left: 10px;
+}
+
+.projectWrapper{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .section--left,
+  .section--right {
+    width: 100%;
+    height: auto;
+  }
+
+  .section--left {
+    position: relative;
+    left: -50px;
+    right: 0;
+    padding: 45px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-y: auto;
+  }
 }

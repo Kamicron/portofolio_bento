@@ -4,6 +4,13 @@ body {
   font-size: var(--base-font-size);
   line-height: var(--line-height);
   font-weight: var(--font-weight-regular);
+  padding: 0 40px;
+  background-color: var(--white);
+  color: var(--dark-gray);
+}
+
+h1, h2{
+  text-transform: uppercase;
 }
 
 h1 {
@@ -42,8 +49,10 @@ h6 {
   line-height: var(--line-height);
 }
 
-/* Utilisation des variables de couleur */
-body {
-  background-color: var(--white);
-  color: var(--dark-gray);
+.title_bg-white{
+  color: var(--dynamic-color_black);
+}
+
+.title_bg-black{
+  color: var(--dynamic-color_white);
 }

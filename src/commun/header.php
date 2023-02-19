@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,5 +7,5 @@
   <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
-  <div class="mainWrapper">
+  <main>
   
