@@ -1,10 +1,9 @@
 <?php
-define('MYSQL_HOST', 'localhost');
+define('MYSQL_HOST', 'ludovimkamicron.mysql.db');
 define('MYSQL_PORT', 3306);
 define('MYSQL_NAME', 'ludovimkamicron');
 define('MYSQL_USER', 'ludovimkamicron');
-define('MYSQL_PASSWORD', 'FCSMDzns32');
-define('URL', '	ludovimkamicron.mysql.db');
+define('MYSQL_PASSWORD', 'K4micr0n25');
 
 
 /**
@@ -17,7 +16,7 @@ function dbConnect()
 {
     try {
         $database = new PDO(
-            sprintf('mysql:host=%s;dbname=%s;port=%s', MYSQL_HOST, MYSQL_NAME, MYSQL_PORT),
+            sprintf('mysql:host=%s;dbname=%s;port=%s;charset=utf8', MYSQL_HOST, MYSQL_NAME, MYSQL_PORT),
             MYSQL_USER,
             MYSQL_PASSWORD
         );
@@ -121,6 +120,5 @@ function getProject()
         $infos[$title]['name_img'] = $info['name_img'];
         $infos[$title]['alt_img'] = $info['alt_img'];
     }
-        return $infos;
-
+    return $infos;
 }

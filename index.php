@@ -5,12 +5,11 @@
 <header class="header">
 
 </header>
-
 <section class="section section--left">
   <div class="information">
     <h1 class="title_bg-black">Ludovic CHEVROULET</h1>
     <div class="profile-icon">
-      <img src="asset/photo/ludovic_chevroulet.jpg" alt="Votre nom">
+      <img src="asset/photo/ludovic_chevroulet.jpg" alt="Votre nom" width="100%" height="100%">
     </div>
     <div>
       Je suis un développeur junior axé sur le back-end, spécialisé dans la création de sites web efficaces et performants, avec une attention particulière à l'expérience utilisateur. </div>
@@ -100,7 +99,7 @@
         <?php
         foreach ($projects as $keyProject => $project) { ?>
           <div class="project-card">
-            <img src="asset/photo/project/<?php echo  $project['name_img']; ?>" alt="<?php echo $project['alt_img']; ?>">
+            <img src="asset/photo/project/<?php echo  $project['name_img']; ?>" alt="<?php echo $project['alt_img']; ?>" width="100%" height="100%">
             <div class="project-info">
               <h3><?php echo  $keyProject; ?></h3>
               <h4><?php echo $project['sub_title_row']; ?></h4>
